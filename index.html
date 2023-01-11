@@ -1,0 +1,106 @@
+<html
+    __fvdsurfcanyoninserted="1"
+    class="
+        clickberry-extension
+        clickberry-extension-standalone
+        clickberry-extension
+        clickberry-extension-standalone
+        clickberry-extension
+        clickberry-extension-standalone
+    "
+>
+    <head>
+        <meta charset="UTF-8" />
+        <!-- 0. Phần icon của website (thay đổi link đến icon nếu bạn muốn sửa nó) -->
+        <link rel="shortcut icon" type="image/png" href="CILKGax.png"/>
+
+        <!-- 1. Đây là phần title của website -->
+        <title>26/12</title>
+        <link rel="stylesheet" href="./style.css">
+        <script>
+            window.open = function () {};
+            window.print = function () {};
+            // Support hover state for mobile.
+            if (false) {
+                window.ontouchstart = function () {};
+            }
+        </script>
+        <script
+            type="text/javascript"
+            src="chrome-extension://bfbmjmiodbnnpllbbbfblcplfjjepjdn/js/injected.js"
+        ></script>
+        <meta content="clickberry-extension-here" />
+    </head>
+
+    <body class="page__main">
+        <link
+            href="https://fonts.googleapis.com/css?family=Wendy+One"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <div class="buttons">
+            <!-- Chữ ở menu bạn có thể sửa lại theo ý của bạn -->
+            <a href="index.html" class="btn btn-bir">Sinh nhật</a>
+            <a href="timeline.html" class="btn btn-timeline">Dòng thời gian</a>
+            <a href="gallery.html" class="btn btn-gallery">Ảnh kĩ niệm</a>
+        </div>
+        <div class="container">
+            <!-- 2. Dòng chữ Happy Birthday
+            Nếu bạn muốn thêm chữ vào thì phải thay đổi css tương ứng cho nó -->
+            <div class="balloon">
+                <div><span>H</span></div>
+                <div><span>A</span></div>
+                <div><span>P</span></div>
+                <div><span>P</span></div>
+                <div><span>Y</span></div>
+                <div><span>B</span></div>
+                <div><span>I</span></div>
+                <div><span>R</span></div>
+                <div><span>T</span></div>
+                <div><span>H</span></div>
+                <div><span>D</span></div>
+                <div><span>A</span></div>
+                <div><span>Y</span></div>
+            </div>
+            <div class="avatar">
+                <!-- 3. Avatar của người bạn muốn gởi lời chúc -->
+                <img src="ey3.jpg" alt="" class="avatar__img" onclick="showMessage()" />
+                <!-- 4. Tên của người đó -->
+                <h1 onclick="showMessage()" class="avatar__title">Trịnh Hồng Phượng (Pi)</h1>
+            </div>
+            
+            <!-- 5. Phần nhạc -->
+            
+        </div>
+        <script>
+            var aAudio = new Audio('Music.mp3');
+            if (document.location.search.match(/type=embed/gi)) {
+                window.parent.postMessage("resize", "*");
+            }
+            function showMessage() {
+                aAudio.play();
+                // 6. Lời nhắn hiện ra khi bấm vào tên hoặc avatar
+                Swal.fire({
+                    title: "Lời nhắn", // Tiêu đề của popup
+                    html:
+                    "Gửi em yêu, chúc mừng sinh nhật của em, vậy là em đã lớn thêm một tuổi, chúc em yêu của anh càng ngày càng xinh đẹp, sức khỏe dồi dào, lúc nào cũng được ngủ ngon và nhớ phải yêu anh thiệt nhiều dô đó. Qua tuổi mới anh sẽ cố gắng kiếm thật nhiều tiền, lấy lại nhiệt huyết tuổi trẻ cho em, anh sẽ cùng em đạt được những thứ mà hai đứa chúng ta mong muốn." +
+                    "<br>"+
+                    "ANH YÊU VÀ THƯƠNG EM RẤT NHIỀU ❤️️",
+                    width: 600,
+                    padding: '2.3em',
+                    background: 'rgba(255,255,255,0.7)',
+                    backdrop: `
+                        rgba(255,255,255,0.4)
+                        url("HPBD.gif")
+                        top
+                        no-repeat    
+                    `,
+                    showConfirmButton: false,
+                });
+                
+            }
+        </script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </body>
+</html>
